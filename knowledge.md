@@ -12,13 +12,11 @@ Create a web-based calculator that allows users to input and evaluate mathematic
 ## Numerical Solver Tips
 - Keep equations as simple as possible to improve numerical stability
 - When converting equality to root finding (a == b → (a) - (b)), use parentheses around both sides
-- fzero requires array [a,b] for bracketing points where f(a) and f(b) have opposite signs
-- fzero uses decimal.js - function must accept string input and return string output
-- Each variable needs its own bracketing range based on physically reasonable values:
-  - gramsBrownSugarToAdd: [40, 50]
-  - gramsHealthy: [200, 300]
-  - healthyGramsSugarPerServing: [1, 10]
-  - calories variables: [100, 200]
+- For robust root finding:
+  1. Bracket positive root by expanding interval (1,2,4,8...) until sign change
+  2. If no positive root, try negative side
+  3. Apply Brent's method once bracket is found - always call toString() on the result
+- Use small positive initial guess (e.g. 1e-6) to bias towards positive solutions
 
 ## Variable Ranges
 When solving equations with multiple variables that can be inferred:
@@ -37,3 +35,4 @@ When solving equations with multiple variables that can be inferred:
 ## Security Notes
 - Current implementation uses eval() which is unsafe for production
 - Need to implement proper sanitization and parsing
+- When using eval() to create functions, must bind them with .bind(null) to ensure proper scope
