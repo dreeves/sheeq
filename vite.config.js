@@ -15,4 +15,11 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
+  server: {
+    host: true,
+    port: 5173,
+    allowedHosts: [
+      '3cd42ba0-cfba-4382-a3b4-f0439737d0aa-00-2ipq44rs8z0lm.janeway.replit.dev' // Add the specific Replit domain here
+    ],
+  },
 })
