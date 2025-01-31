@@ -1,4 +1,14 @@
-# sheeq
+Sheeq: SpreadSHeet-style interface via an EQuation.
+AKA a calculator calculator.
+
+Background 
+[on the Beeminder forum](https://forum.beeminder.com/t/turning-greek-yogurt-into-junk-food/12184/2?u=dreev).
+
+Implemented by Codebuff, using 
+[Narthur's tool](https://codebuff.nathanarthur.com/?step=4&pm=bun&fw=vue&ts=true&deploy=render).
+
+
+# Boilerplate from Vue and Vite or whatever
 
 This template should help get you started developing with Vue 3 in Vite.
 
