@@ -1,4 +1,4 @@
-# Sheeq: SpreadHeEt-style interfacE via an EQuation
+# Sheeq: SpreadsHeEt-style interfacE via an eQuation
 
 AKA a calculator calculator.
 
